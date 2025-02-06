@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Universal Learning Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedbackcs.css"> <!--css -->
+    <link rel="icon" href="3.png"> <!-- icon image-->
+</head>
+<body>
+    <div class="say">
+        <img class="logoleft" src="5.png" alt="logo">
+        <h1 class="saying">PAVING THE WAY FOR UNIVERSAL LEARNING</h1>
+        <img class="logoright" src="5.png" alt="logo">
+    </div>
+    <header>
+        <nav class="homenav"> <!-- navigation bar -->
+            <ul class="menu">
+                <li><a href="home.html">HomePage</a></li>
+                <li><a href="../Student3/profile.html">UserProfile</a></li>
+                <li><a href="../Shop/shop.html">Shop</a></li>
+                <li><a href="../Student4/gallery/gallery.html">Gallery</a></li>
+                <li  class="active"><a href="feedback.html">Feedback</a></li>
+                <li><a href="../Student3/team.html">Team</a></li>
+                <li><a href="../Student4/sitemap/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="feedback-form">    <!-- Feedback form-->
+        <h2>Feedback form</h2>
+        <form id="feedbackForm" onsubmit="return showPreview(event)">
+            <div>
+                <label for="name">Enter your name:</label><!-- getting name-->
+                <input type="text" id="name" name="name" placeholder="D.P.Khehan Lakkitha">
+            </div>
+            <div>
+                <label for="email">Enter your email:</label><!-- getting email-->
+                <input type="text" id="email" name="email" placeholder="Lak1kitha@gmail.com">
+            </div>
+            <div>
+                <label for="phone">Enter your phone number:</label><!-- getting phone number-->
+                <input type="text" id="phone" name="phone" placeholder="0712344568">
+            </div>
+            <div>
+                <label>Is this your first time visiting?</label>
+                <div class="radio-group">
+                    <input type="radio" id="firstVYes" name="firstVisit" value="Yes">
+                    <label for="firstVYes">Yes</label>
+                    <input type="radio" id="firstVNo" name="firstVisit" value="No">
+                    <label for="firstVNo">No</label>
+                </div>
+            </div>
+            <div>
+                <label>Is this website informative and easy to navigate?</label>
+                <div class="radio-group"><!-- radio buttons-->
+                    <input type="radio" id="inforYes" name="informative" value="Yes">
+                    <label for="inforYes">Yes</label>
+                    <input type="radio" id="inforNo" name="informative" value="No">
+                    <label for="inforNo">No</label>
+                </div>
+            </div>
+            <div>
+                <label>If "no", suggest some improvement:</label>
+                <textarea id="improvements" name="improvements" rows="4" cols="50" placeholder="suggest any improvement"></textarea>
+            </div>
+            <div>
+                <label>How satisfied are you with our service, from 0 to 10:</label>
+                <div class="radio-group rating"><!-- radio buttons from 1 to 10-->
+                    <input type="radio" id="rate0" name="rating" value="0">
+                    <label for="rate0">0</label>
+                    <input type="radio" id="rate1" name="rating" value="1">
+                    <label for="rate1">1</label>
+                    <input type="radio" id="rate2" name="rating" value="2">
+                    <label for="rate2">2</label>
+                    <input type="radio" id="rate3" name="rating" value="3">
+                    <label for="rate3">3</label>
+                    <input type="radio" id="rate4" name="rating" value="4">
+                    <label for="rate4">4</label>
+                    <input type="radio" id="rate5" name="rating" value="5">
+                    <label for="rate5">5</label>
+                    <input type="radio" id="rate6" name="rating" value="6">
+                    <label for="rate6">6</label>
+                    <input type="radio" id="rate7" name="rating" value="7">
+                    <label for="rate7">7</label>
+                    <input type="radio" id="rate8" name="rating" value="8">
+                    <label for="rate8">8</label>
+                    <input type="radio" id="rate9" name="rating" value="9">
+                    <label for="rate9">9</label>
+                    <input type="radio" id="rate10" name="rating" value="10">
+                    <label for="rate10">10</label>
+                </div>
+            </div>
+            <div>
+                <label>Would you recommend our services?</label>
+                <div class="radio-group">
+                    <input type="radio" id="recommendYes" name="recommend" value="Yes">
+                    <label for="recommendYes">Yes</label>
+                    <input type="radio" id="recommendNo" name="recommend" value="No">
+                    <label for="recommendNo">No</label>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            <a href="#top" class="back-to-top">Back to Top</a>
+            <footer>    <!-- Footer section with links -->
+                <ul class="bottomlinks">
+                    <li><a href="editor.html" target="_blank">Student 2</a></li>
+                </ul>
+            </footer>
+        </form>
+    </section>
+    <section id="previewSection" class="previewSection" style="display:none;"><!-- Preview of entered feedback details -->
+        <h3>Preview Your Feedback</h3>
+        <p><strong>Name:</strong> <span id="previewName"></span></p>
+        <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+        <p><strong>First Time Visiting:</strong> <span id="previewFirstVisit"></span></p>
+        <p><strong>Informative and Easy to Navigate:</strong> <span id="previewInformative"></span></p>
+        <p><strong>Improvements:</strong> <span id="previewImprovements"></span></p>
+        <p><strong>Rating:</strong> <span id="previewRating"></span></p>
+        <p><strong>Recommend:</strong> <span id="previewRecommend"></span></p>
+        <div class="form-actions">
+            <button onclick="confirmSubmission()">Confirm</button>
+            <button onclick="editDetails()">Edit</button>
+        </div>
+    </section>
+    <section id="confirmationMessage" class="confirmationMessage" style="display:none;"><!-- Confirmation message after submission -->
+        <h3 class="thank">Thanks for your Valuable feedback!</h3>
+        <p class="thank">Your feedback has been successfully submitted.</p>
+    </section>
+    <script src="script.js"></script>  <!-- JavaScript file -->
+</body>
+</html>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (validateForm()) {
+        showPreview(event);
+    }
+});
+
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const firstVisit = document.querySelector('input[name="firstVisit"]:checked');
+    const informative = document.querySelector('input[name="informative"]:checked');
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const recommend = document.querySelector('input[name="recommend"]:checked');
+
+    if (!validateName(name)) {
+        alert('Please enter a valid name.');
+        return false;
+    }
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+    if (!validatePhone(phone)) {
+        alert('Please enter a valid phone number.');
+        return false;
+    }
+    if (!firstVisit) {
+        alert('Please select if this was your first time visiting.');
+        return false;
+    }
+    if (!informative) {
+        alert('Please select if the website was informative and easy to navigate.');
+        return false;
+    }
+    if (!rating) {
+        alert('Please select a rating for our services.');
+        return false;
+    }
+    if (!recommend) {
+        alert('Please select if you would recommend our services.');
+        return false;
+    }
+
+    return true;
+}
+
+function validateName(name) {
+    return name.trim().length > 0;
+}
+
+function validateEmail(email) {
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return mailformat.test(email);
+}
+
+function validatePhone(phone) {
+    const phoneFormat = /^\d{10}$/; // Adjust the regex as per your phone number format requirements
+    return phoneFormat.test(phone);
+}
+
+function showPreview(event) {
+    event.preventDefault();
+
+    document.getElementById('previewName').textContent = document.getElementById('name').value;
+    document.getElementById('previewEmail').textContent = document.getElementById('email').value;
+    document.getElementById('previewPhone').textContent = document.getElementById('phone').value;
+    document.getElementById('previewFirstVisit').textContent = document.querySelector('input[name="firstVisit"]:checked').value;
+    document.getElementById('previewInformative').textContent = document.querySelector('input[name="informative"]:checked').value;
+    document.getElementById('previewImprovements').textContent = document.getElementById('improvements').value;
+    document.getElementById('previewRating').textContent = document.querySelector('input[name="rating"]:checked').value;
+    document.getElementById('previewRecommend').textContent = document.querySelector('input[name="recommend"]:checked').value;
+
+    document.getElementById('previewSection').style.display = 'block';
+    document.getElementById('feedbackForm').style.display = 'none';
+}
+
+function confirmSubmission() {
+    document.getElementById('previewSection').style.display = 'none';
+    document.getElementById('confirmationMessage').style.display = 'block';
+}
+
+function editDetails() {
+    document.getElementById('previewSection').style.display = 'none';
+    document.getElementById('feedbackForm').style.display = 'block';
+}
+
+</script>

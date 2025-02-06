@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set and viewport for better display -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Title of the webpage -->
+    <title>User Profile - PAVING THE WAY FOR UNIVERSAL LEARNING</title>
+     <!-- External stylesheet for styling -->
+    <link rel="stylesheet" href="firsttry.css">
+    <link rel="icon" href="3.png"> <!-- icon image-->
+</head>
+<body class="home">
+    <main>
+        <!-- Header section with site logo and name -->
+        <div class="say">
+            <img class="logoleft" src="5.png" alt="logo">
+            <h1 class="saying">PAVING THE WAY FOR UNIVERSAL LEARNING</h1>
+            <img class="logoright" src="5.png" alt="logo">
+        </div>
+            <!-- Navigation bar -->
+        <header>
+            <nav class="homenav">
+                <ul class="menu">
+                     <!-- Navigation links -->
+                    <li><a href="../Student2/home.html">HomePage</a></li>
+                    <li class="active"><a href="profile.html">UserProfile</a></li>
+                    <li><a href="../Shop/shop.html">Shop</a></li>
+                    <li><a href="../Student4/gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../Student2/feedback.html">Feedback</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="../Student4/sitemap/sitemap.html">Sitemap</a></li>
+                </ul>
+            </nav>
+        </header>
+           <!-- Title for the user profile section -->
+        <h1 class="user1">User Profile</h1>
+        <!-- Form for collecting user profile information -->
+        <form id="profile-form">
+            <!-- Step 1 -->
+            <div class="step" data-step="1" style="display: block;">
+                <h2 class="user2">Personal Details (Step 1/4)</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1">
+                <label for="gender">Gender: </label>
+                <input type="text" id="gender" name="gender" required>
+                <label for="privacy">Agree with privacy terms:</label>
+                <input type="checkbox" id="privacy" name="privacy" required>
+            </div>
+            <!-- Step 2 -->
+            <div class="step" data-step="2" style="display: none;">
+                <h2 class="user2">Volunteering Tasks (Step 2/4)</h2>
+                <label for="rationale">Rationale:</label>
+                <input type="text" id="rationale" name="rationale">
+                <label for="date_of_joining">Date of Joining:</label>
+                <input type="date" id="date_of_joining" name="date_of_joining">
+                <label for="task">Task:</label>
+                <input type="text" id="task" name="task">
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place">
+                <label for="assignment_type">Assignment Type:</label>
+                <input type="text" id="assignment_type" name="assignment_type" required>
+            </div>
+             <!-- Step 3: Qualifications -->
+            <div class="step" data-step="3" style="display: none;">
+                <h2 class="user2">Qualifications (Step 3/4)</h2>
+                <label for="area_of_study">Area of Study:</label>
+                <input type="text" id="area_of_study" name="area_of_study" required>
+                <label for="highest_degree">Highest Degree:</label>
+                <input type="text" id="highest_degree" name="highest_degree">
+                <label for="university">University/Institution:</label>
+                <input type="text" id="university" name="university" required>
+                <label for="completion_year">Completion Year:</label>
+                <input type="month" id="completion_year" name="completion_year" required>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country">
+            </div>
+            <!-- Step 4: Availability and Contact -->
+            <div class="step" data-step="4" style="display: none;">
+                <h2 class="user2">Availability and Contact (Step 4/4)</h2>
+                <label for="min_hours">Min Hours per Week:</label>
+                <input type="number" id="min_hours" name="min_hours">
+                <label for="tel">Telephone:</label>
+                <input type="tel" id="tel" name="tel">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <!-- Navigation buttons for the form -->
+            <button type="button" id="prevButton">Previous</button>
+            <button type="button" id="nextButton">Next</button>
+            <button type="submit" id="submitButton" style="display: none;">Submit</button>
+            <!-- Progress bar to indicate form completion -->
+            <progress id="progressBar" value="0" max="100"></progress>
+        </form>
+          <!-- Placeholder for displaying profile overview -->
+        <div id="profile-output">
+            <h2 class="user2">Profile Overview</h2>
+            <!-- Displayed profile details -->
+            <p id="profile-name"></p>
+            <p id="profile-surname"></p>
+            <p id="profile-age"></p>
+            <p id="profile-gender"></p>
+            <p id="profile-privacy"></p>
+            <p id="profile-rationale"></p>
+            <p id="profile-date_of_joining"></p>
+            <p id="profile-task"></p>
+            <p id="profile-place"></p>
+            <p id="profile-assignment_type"></p>
+            <p id="profile-area_of_study"></p>
+            <p id="profile-highest_degree"></p>
+            <p id="profile-university"></p>
+            <p id="profile-completion_year"></p>
+            <p id="profile-country"></p>
+            <p id="profile-min_hours"></p>
+            <p id="profile-tel"></p>
+            <p id="profile-email"></p>
+        </div>
+        <!-- Footer section -->
+        <footer>
+            <ul class="bottomlinks">
+                <li><a href="editor.html">Student 3</a></li>
+            </ul>
+        </footer>
+    </main>
+    <!-- JavaScript file for form navigation and functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+

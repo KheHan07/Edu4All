@@ -1,0 +1,218 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any default margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+html, body {
+    height: 100%;/*makes sure body elements use full height of the browser */
+    display: flex;/*enable  more control over their positioning and alignments */
+    flex-direction: column;/* setting the flex container to be laid out as a column*/
+}
+.main-content {
+    flex: 1;/* allow to expand and fill available spaces ENSURE the footer stays bottom if there isnt enough content */
+    display: flex;/*flexbox model for its direct children*/
+    flex-direction: column;/*to step the direction of the flex container to be vertical*/
+}
+.say {
+    margin-top: 0%;
+    padding-top: 0%;
+    position: sticky;/*allows to stick to the top of the viewport when scrolling pass it. */
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexible mode */
+    align-items: flex-start;/* align on the start top vertically */
+    justify-content: center;/* align center horizontally */
+    text-align: center;/* text of the block to be centered */
+}
+
+img.logoleft, img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements. */
+    width: 50px; /* width of the image */
+    height: auto; /* auto height according to the width */
+    margin: 10px; /* margin around the images */
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text */
+    margin-top: 20px;/* from top margin */
+    font-size: 25px;/* font size */
+}
+header {
+    z-index: 1000;
+    background-color: #353535;/*bg color*/
+    display: flex;/* to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/* align center horizontally */
+    position: sticky;/*header should stick to the top of its containing block*/
+    top: 0;/*means the top edge*/
+}
+.menu {
+    
+    list-style: none;/* removes the default bullet points or numbering from the list */
+    display: flex;/* allowing to use flexbox properties to control the layout of its child elements */
+    flex-wrap: wrap;/*responsive design */
+    justify-content: center;/* align center horizontally */
+    background-color: #353535;/*bg color even wraping*/
+}
+.menu li, a {
+    
+    font-weight: bold; /* thickness or boldness of the font */
+    font-size: 15px;/* font size */
+    background-color: #353535;/* backg. color of the li,a and not strictly necessary */
+    color: #ffecc0;/* color of the contents */
+    text-decoration: none;/* removes the under lines from the links */
+    transition: all 0.2s ease 0s;/* change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings */
+    display: block/* occupying full width and stacking vertically within their parent <li> elements. */
+}
+.menu li {
+    
+    padding: 0px; /* touches corner of the content top bottom default turn off */
+}
+
+nav ul li a:hover, nav ul li.active a {
+
+    background-color: #d2e12c;/*bc of li s*/
+    color: #353535;/* text color */
+}
+
+/*feedback form   */
+.feedback-form {
+    padding: 20px;
+}
+
+.feedback-form h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.feedback-form form {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.feedback-form div {
+    margin-bottom: 10px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form input[type="tel"],
+.feedback-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+#inforYes, #inforNo, #firstVYes, #firstVNo,#rate1,#rate0,#rate2,#rate3,#rate4,#rate5,#rate6,#rate7,#rate8,#rate9,#rate10,#recommendYes,#recommendNo{
+    margin-bottom: 10px;
+}
+.radio-group {
+    display: flex;
+    margin-left: 50px;
+   
+}
+.radio-group label {
+
+    margin-right: 30px;
+}
+
+.rating label {
+    margin-right: 30px;
+}
+
+.form-actions {
+    
+    text-align: center;
+}
+
+.form-actions button {
+    font-weight: bold;
+    background-color: #353535;
+    color: #d2e12c;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 25px;
+}
+
+.form-actions button:hover {
+    background-color: #d2e12c;
+    color: #353535;
+}
+.previewSection p, h3{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.previewSection h3{
+font-size: 25px;
+}
+
+.previewSection,
+.confirmationMessage {
+    padding: 20px;
+    text-align: center;
+}
+
+.previewSection h3,
+.confirmationMessage h3 {
+    color: #353535;
+}
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #353535;
+    color: #ffecc0;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-to-top:hover {
+    background-color: #d2e12c;
+    color: #353535;
+}
+footer {
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #353535;
+    font-weight: bold;
+    padding: 10px;
+}
+.bottomlinks a:hover{
+    color:#d2e12c;
+    background-color: #353535;
+}
+.thank{
+    font-weight: bold;
+    font-size: 20px;
+}

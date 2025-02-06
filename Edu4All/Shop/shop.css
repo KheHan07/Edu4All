@@ -1,0 +1,388 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any default margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+html, body {
+    height: 100%;/*makes sure body elements use full height of the browser */
+    display: flex;/*enable  more control over their positioning and alignments */
+    flex-direction: column;/* setting the flex container to be laid out as a column*/
+}
+.main-content {
+    flex: 1;/* allow to expand and fill available spaces ENSURE the footer stays bottom if there isnt enough content */
+    display: flex;/*flexbox model for its direct children*/
+    flex-direction: column;/*to step the direction of the flex container to be vertical*/
+}
+.say {
+    margin-top: 0%;
+    padding-top: 0%;
+    position: sticky;/*allows to stick to the top of the viewport when scrolling pass it. */
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexible mode */
+    align-items: flex-start;/* align on the start top vertically */
+    justify-content: center;/* align center horizontally */
+    text-align: center;/* text of the block to be centered */
+}
+
+img.logoleft, img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements. */
+    width: 50px; /* width of the image */
+    height: auto; /* auto height according to the width */
+    margin: 10px; /* margin around the images */
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text */
+    margin-top: 20px;/* from top margin */
+    font-size: 25px;/* font size */
+}
+header {
+    z-index: 1000;
+    background-color: #353535;/*bg color*/
+    display: flex;/* to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/* align center horizontally */
+    position: sticky;/*header should stick to the top of its containing block*/
+    top: 0;/*means the top edge*/
+}
+.menu {
+    
+    list-style: none;/* removes the default bullet points or numbering from the list */
+    display: flex;/* allowing to use flexbox properties to control the layout of its child elements */
+    flex-wrap: wrap;/*responsive design */
+    justify-content: center;/* align center horizontally */
+    background-color: #353535;/*bg color even wraping*/
+}
+.menu li, a {
+    
+    font-weight: bold; /* thickness or boldness of the font */
+    font-size: 15px;/* font size */
+    background-color: #353535;/* backg. color of the li,a and not strictly necessary */
+    color: #ffecc0;/* color of the contents */
+    text-decoration: none;/* removes the under lines from the links */
+    transition: all 0.2s ease 0s;/* change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings */
+    display: block/* occupying full width and stacking vertically within their parent <li> elements. */
+}
+.menu li {
+    
+    padding: 0px; /* touches corner of the content top bottom default turn off */
+}
+
+nav ul li a:hover, nav ul li.active a {
+
+    background-color: #d2e12c;/*bc of li s*/
+    color: #353535;/* text color */
+}
+
+/* styling the cart */
+.cart {
+    position: fixed; /*keeping the cart fixed so when user scrolls he still will be able to view the cart*/
+    top: 150px; /*Adjusting cart position*/
+    right: 30px;
+    width: 250px; /*have a fixed width for the cart*/
+    background-color: #353535; /*Adding theme colors when styling*/
+    color: #ffecc0;
+    border: 2px solid #d2e12c;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*adding a shadow behind cart*/
+}
+
+/* cart header ("Cart") */
+.cart-top {
+    background-color: #353535;
+    margin-bottom: 10px;
+    color: #d2e12c;
+}
+
+/* styling the two divs (donation and merch) in the cart */
+.donation-cart-items, .shop-cart-items {
+    background-color: #353535;
+}
+
+/*Styling cart item when added through the javascript logic*/
+.cart-item {
+    background-color: #353535;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*Having the background of the span of the cart item match with the background of the cart*/
+.cart-item span{
+    background-color: #353535;
+}
+
+/*the remove button*/
+/*Background color is a lighter red color with white font color
+for the 'X' and when hovered it smoothly changes background color
+due to transition property*/
+.remove-button {
+    background-color: #ef4f4f; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    font-size: 12px; 
+    transition: background-color 0.2s ease;
+}
+
+.remove-button:hover {
+    background-color: #e60505; /* darkening the red color when hovering over the button */
+}
+
+/* styling cart total div */
+.cart-total {
+    background-color: #353535;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* styling checkout and clear button in the cart */
+.cart-button {
+    background-color: #d2e12c;
+    color: #353535;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+/*checkout and clear button hover effects*/
+.cart-button:hover {
+    background-color: #2c2c2c;
+    color: #d2e12c;
+}
+
+/* Providing space for the cart by adjusting the padding
+ in the shop section (donations and merch) */
+.shop {
+    padding-right: 270px;
+}
+
+/* styling the donations section */
+/* styling first message 
+(this also applies to the message in merch section) */
+.message1 {
+    text-align: center;
+    color: #353535;
+    margin-top: 20px;
+}
+
+/* styling second message
+(this also applies to the message in merch section) */
+.message2 {
+    text-align: center;
+    color: #353535;
+    margin: 15px 0px 30px 0px; 
+}
+
+/* styling donation section so that it automatically
+adjusts when resizing the browser*/
+.donation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* centering the donation buttons with space */
+.donation-item {
+    margin: 10px 20px;
+    text-align: center;
+}
+
+/* donation button styling */
+.donation-button {
+    background-color: #d2e12c;
+    color: #353535;
+    border: 2px solid #353535;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+/* hover effects on donation button */
+.donation-button:hover {
+    background-color: #2c2c2c;
+    color: #d2e12c;
+}
+
+/* styling custom donation input field */
+.custom-donation {
+    border: 2px solid #353535;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* styling the merch section */
+/* styling merch section so that it automatically
+adjusts when resizing the browser*/
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* styling product card (when hovered it changes it's scale and drops a shadow) */
+.product-item {
+    background-color: #353535;
+    border: 2px solid #d2e12c;
+    border-radius: 10px;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+/* scale and shadow effect when hovering over a product */
+.product-item:hover{
+    transform: scale(1.03);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* adjusting photo of product to fit in frame */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* styling product name */
+.product-name {
+    font-size: 20px;
+    background-color: #353535;
+    color: #ffecc0;
+    margin: 10px 0;
+}
+
+/* styling product price */
+.product-price {
+    font-size: 18px;
+    background-color: #353535;
+    color: #d2e12c;
+    margin: 10px 0;
+}
+
+/* adjusting the three color options to be in one row and adjust
+automatically when window is resized */
+.color-options {
+    display: flex;
+    justify-content: center;
+    background-color: #353535;
+    margin: 10px 0;
+}
+
+/* styling the color options */
+.color-button {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #d2e12c;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* styling color options when hovered over */
+.color-button:hover {
+    border: none;
+    transform: scale(1.2);
+}
+
+/* styling the label for custom donation input */
+.q-label {
+    background-color: #353535;
+    color: #ffecc0;
+    margin-bottom: 10px;
+}
+
+/* styling custom donation input */
+.quantity {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* styling add to cart button */
+.add-to-cart {
+    background-color: #d2e12c;
+    color: #353535;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* add to cart button changes font and background color when hovered over */
+.add-to-cart:hover {
+    background-color: #2c2c2c;
+    color: #d2e12c;
+}
+
+/* adjusting footer */
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+/* styling the page editor link */
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #353535;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* hover effects on page editor link */
+.bottomlinks a:hover{
+    color:#d2e12c;
+    background-color: #353535;
+}
+
+/* adjusting cart and custom donation input when browser is resized */
+@media (max-width: 1060px) {
+    .cart{
+        top: 150px;
+        right: 20px;
+        width: 210px;
+    }
+}
+
+@media (max-width: 650px) {
+    .custom-donation {
+        margin-bottom: 20px;
+    }
+    .cart{
+        top: 170px;
+    }
+}

@@ -1,0 +1,126 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffecc0;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.say {
+    margin-top: 0%;
+    padding-top: 0%;
+    position: sticky;
+    background-color: #d2e12c;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+img.logoleft, img.logoright {
+    background-color: #d2e12c;
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
+    margin: 10px;
+}
+.saying {
+    background-color: #d2e12c;
+    color: #353535;
+    margin-top: 20px;
+    font-size: 25px;
+}
+header {
+    z-index: 1000;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #353535;
+}
+.menu li, a {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #353535;
+    color: #ffecc0;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+    padding: 15px 15px;
+    display: block
+}
+.menu li {
+    padding: 0;
+}
+
+nav ul li a:hover, nav ul li.active a {
+    background-color: #d2e12c;
+    color: #353535;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #353535;
+    font-weight: bold;
+    padding: 10px;
+}
+.bottomlinks a:hover {
+    color: #d2e12c;
+    background-color: #353535;
+}
+
+.sitemap-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sitemap {
+    width: 100%; /*sets dimensions of the sitemap*/
+    height: auto;
+}
+.node {
+    fill: #4CAF50; /*the colour of the node*/
+    stroke: #333;
+    stroke-width: 2px;
+}
+.node-text {
+    fill: #000;
+    font-size: 12px;
+    pointer-events: none;
+}
+.line {
+    stroke: #333;
+    stroke-width: 2px;
+}

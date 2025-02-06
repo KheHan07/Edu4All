@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Universal Learning Access</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="shop.css"> <!--css -->
+        <link rel="icon" href="Logos/3.png"> <!-- icon image-->
+    </head>
+    <body> 
+        <div class="say">
+            <img class="logoleft" src="Logos/5.png" alt="logo">
+            <h1 class="saying">PAVING THE WAY FOR UNIVERSAL LEARNING</h1>
+            <img class="logoright" src="Logos/5.png" alt="logo">
+        </div>
+        <header>
+            <nav class="homenav"> <!-- navigation bar -->
+                <ul class="menu">
+                    <li><a href="../Student2/home.html">HomePage</a></li>
+                    <li><a href="../Student3/profile.html">UserProfile</a></li>
+                    <li class="active"><a href="shop.html">Shop</a></li>
+                    <li><a href="../Student4/gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../Student2/feedback.html">Feedback</a></li>
+                    <li><a href="../Student3/team.html">Team</a></li>
+                    <li><a href="../Student4/sitemap/sitemap.html">Sitemap</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+
+        <div class="cart"> <!-- hovering cart on the top right corner -->
+            <h2 class="cart-top">Cart</h2>
+            <div class="donation-cart-items" id="donation-cart-items"></div>
+            <div class="shop-cart-items" id="shop-cart-items"></div>
+            <div class="cart-total" id="cart-total">Total: Rs. 0</div>
+            <button class="cart-button" onclick="checkout()">Checkout</button>
+            <button class="cart-button" onclick="clearCart()">Clear Cart</button>
+        </div>
+
+        <div class="shop"> <!-- whole shop -->
+            <!-- beginning shop with the donation section -->
+            <!-- the donation section allows the user to give a donation by stacking after clicking
+            the donation buttons and also allowing to add a custom donation to the cart
+            -->
+            <h1 class="message1">Support Our Cause with a Donation!</h1>
+            <h2 class="message2">Your contributions make a difference!</h2>
+            <div class="donation-grid"> <!-- div setup for donations section -->
+                <!-- buttons functioned using javascript -->
+                <div class="donation-item">
+                    <button class="donation-button" onclick="donationAddToCart(100)">Rs. 100</button>
+                </div>
+                <div class="donation-item">
+                    <button class="donation-button" onclick="donationAddToCart(250)">Rs. 250</button>
+                </div>
+                <div class="donation-item">
+                    <button class="donation-button" onclick="donationAddToCart(500)">Rs. 500</button>
+                </div>
+                <div class="donation-item">
+                    <button class="donation-button" onclick="donationAddToCart(1000)">Rs. 1000</button>
+                </div>
+                <div class="donation-item">
+                    <button class="donation-button" onclick="donationAddToCart(5000)">Rs. 5000</button>
+                </div>
+                <!-- custom amount acception using javascript -->
+                <div class="donation-item">
+                    <input type="number" id="custom-donation" class="custom-donation" placeholder="Custom Amount">
+                    <button class="donation-button" onclick="donationAddCustomAmount()">Donate</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- then the merch section -->
+            <!-- the merch section allows the user to select a color and quantity 
+             and add it to the cart 
+            -->
+            <h1 class="message1">Checkout our Merchandise!</h1>
+            <h2 class="message2">50% of every purchase will be donated to charity!</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="Mugs/MugWhite.jpg" alt="White Mug" class="product-image" id="mug"> <!-- product image -->
+                    <h3 class="product-name">Coffee Mug</h3>
+                    <div class="color-options">
+                        <!-- product image changes according to color, javascript functionalities used -->
+                        <!-- inline css is added for the color of buttons because the three colors of every product is not identical, 
+                         so it would be required to add seperate id's to all color buttons if external CSS is used --> 
+                        <button class="color-button" style="background-color: white;" onclick="changeColor('mug', 0)"></button>
+                        <button class="color-button" style="background-color: #d8bba7;" onclick="changeColor('mug', 1)"></button>
+                        <button class="color-button" style="background-color: #e4e70e;" onclick="changeColor('mug', 2)"></button>
+                    </div>
+                    <p class="product-price">Rs. 500</p>
+                    <label for="mug-quantity" class="q-label">Quantity:</label>
+                    <input type="number" name="quantity" id="mug-quantity" min="1" max="5" value="1" class="quantity">
+                    <button class="add-to-cart" onclick="shopAddToCart('mug', 'mug-quantity', 500)">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="Tumbler/TumblerBlack.jpg" alt="Black Tumbler" class="product-image" id="tumbler">
+                    <h3 class="product-name">Tumbler</h3>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: black;" onclick="changeColor('tumbler', 0)"></button>
+                        <button class="color-button" style="background-color: #d8bba7;" onclick="changeColor('tumbler', 1)"></button>
+                        <button class="color-button" style="background-color: #082e03;" onclick="changeColor('tumbler', 2)"></button>
+                    </div>
+                    <p class="product-price">Rs. 1000</p>
+                    <label for="tumbler-quantity" class="q-label">Quantity:</label>
+                    <input type="number" name="quantity" id="tumbler-quantity" min="1" max="5" value="1" class="quantity">
+                    <button class="add-to-cart" onclick="shopAddToCart('tumbler', 'tumbler-quantity', 1000)">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="Cap/CapWhite.jpg" alt="White Cap" class="product-image" id="cap">
+                    <h3 class="product-name">Cap</h3>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: white;" onclick="changeColor('cap', 0)"></button>
+                        <button class="color-button" style="background-color: #d8bba7;" onclick="changeColor('cap', 1)"></button>
+                        <button class="color-button" style="background-color: black;" onclick="changeColor('cap', 2)"></button>
+                    </div>
+                    <p class="product-price">Rs. 400</p>
+                    <label for="cap-quantity" class="q-label">Quantity:</label>
+                    <input type="number" name="quantity" id="cap-quantity" min="1" max="5" value="1" class="quantity">
+                    <button class="add-to-cart" onclick="shopAddToCart('cap', 'cap-quantity', 400)">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="BucketHat/BucketHatWhite.jpg" alt="White Bucket Hat" class="product-image" id="bhat">
+                    <h3 class="product-name">Bucket Hat</h3>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: white;" onclick="changeColor('bhat', 0)"></button>
+                        <button class="color-button" style="background-color: #d8bba7;" onclick="changeColor('bhat', 1)"></button>
+                        <button class="color-button" style="background-color: black;" onclick="changeColor('bhat', 2)"></button>
+                    </div>
+                    <p class="product-price">Rs. 600</p>
+                    <label for="bhat-quantity" class="q-label">Quantity:</label>
+                    <input type="number" name="quantity" id="bhat-quantity" min="1" max="5" value="1" class="quantity">
+                    <button class="add-to-cart" onclick="shopAddToCart('bhat', 'bhat-quantity', 600)">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="Notebook/NotebookBlack.jpg" alt="Black Notebook" class="product-image" id="notebook">
+                    <h3 class="product-name">Notebook</h3>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: black;" onclick="changeColor('notebook', 0)"></button>
+                        <button class="color-button" style="background-color: #d8bba7;" onclick="changeColor('notebook', 1)"></button>
+                        <button class="color-button" style="background-color: #082e03;" onclick="changeColor('notebook', 2)"></button>
+                    </div>
+                    <p class="product-price">Rs. 200</p>
+                    <label for="notebook-quantity" class="q-label">Quantity:</label>
+                    <input type="number" name="quantity" id="notebook-quantity" min="1" max="5" value="1" class="quantity">
+                    <button class="add-to-cart" onclick="shopAddToCart('notebook', 'notebook-quantity', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="bottomlinks">
+                <li><a href="../PageEditor/editor.html" target="_blank">Student 1</a></li> <!-- page editor link -->
+            </ul>
+        </footer>
+        <script src="shop.js"></script> <!-- JavaScript -->
+    </body>
+</html>

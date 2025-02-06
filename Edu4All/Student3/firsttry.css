@@ -1,0 +1,368 @@
+* { 
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any defaul margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+                            /* top line tht says PAVING THE WAY FOR UNIVERSAL LEARNING*/
+.say {
+    position: sticky;
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexibal mode*/
+    align-items: flex-start;/*align on the start top vertically*/
+    justify-content: center;/*align center horizontally*/
+    text-align: center;/* text of the block to be centered(necessary when small 
+    the widow size words go down and to be centered) */
+}
+img.logoleft {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-right: 10px;/* margin right 10px*/
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text*/
+    margin-top: 10px;/* from top margin*/
+    font-size: 25px;/* font size*/
+}
+img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-left: 10px;/* margin left 10px*/
+}
+                                            /*nav bar*/
+header {
+    background-color: #353535;
+    color-scheme: #353535;
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/*align center horizontally*/
+    position: sticky;
+    top: 0;
+}   
+.homenav {
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    background-color: #353535;/*backg. color of the li,a and not strictly necessary*/
+}
+.menu {
+    overflow: hidden;
+    list-style: none;/* removes the default bullet points or numbering from the list*/
+    display: flex;/*allowing to use flexbox properties to control the layout of its child elements*/
+    flex-wrap: wrap;/* responsive design */
+    justify-content: center;/*align center horizontally 
+    EVEN WHEN THE SCREEN IS SMALL ONCE CONTENTS GO NEXT LINE */
+    background-color: #353535;
+}
+.menu li, a {
+    font-weight: bold; /* thickness or boldness of the font*/
+    font-size: 15px;/* font size*/
+    background-color: #353535;/*backg. color of the li,a and not strictly necessary*/
+    color: #ffecc0;/* color of the contents*/
+    text-decoration: none;/*removes the under lines from the links , make it like a button */
+    transition: all 0.2s ease 0s;/*change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings*/
+    display:block/* occupying full width and stacking vertically within their parent <li> elements.*/
+}
+.menu li {
+    padding: 0px; /*touches corner of the content top bottom default turn off*/
+}
+nav ul li a:hover, nav ul li.active a {
+    background-color: #d2e12c;/*bc of li s*/
+    color: #353535;/* text color */
+}
+
+/* Form Styling */
+/* General Form Styling */
+form {
+    font-size: 20px;/*Text size inside the form*/
+    padding: 20px; /* Add padding inside the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+.user1 {
+    text-align: center;
+    margin: 20px; /* Add margin around user1 class elements */
+}
+
+/* Label Styling */
+label {
+    margin-top: 10px; /* Space above each label */
+    margin-bottom: 5px; /* Space below each label */
+    display: block; /* Make labels block elements to stack vertically */
+}
+
+/* Input Styling */
+input[type="text"], input[type="number"], input[type="checkbox"] {
+    margin-bottom: 10px; /* Space below each input field */
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px; /* Padding inside the button */
+    margin-top: 10px; /* Space above the button */
+    background-color: #353535; /* Dark background color */
+    color: #d2e12c; /* Light text color */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.2s ease 0s; /* Smooth transition for hover effect */
+    width: 100px; /* Fixed width for the button */
+}
+
+button:hover {
+    background-color: #d2e12c; /* Light background color on hover */
+    color: #353535; /* Dark text color on hover */
+}
+
+/* Progress Bar Styling */
+#progressBar {
+    width: 100%; /* Full width progress bar */
+    height: 20px; /* Height of the progress bar */
+    border-radius: 15px; /* Rounded corners for the progress bar */
+    margin-top: 20px; /* Space above the progress bar */
+    background-color: #d3d3d3; /* Light background color */
+    position: relative; /* Position relative for the inner fill */
+}
+
+#progressBar::after {
+    content: ''; /* Empty content for the inner fill */
+    position: absolute; /* Absolute position inside the progress bar */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the progress bar */
+    width: 25%; /* Fill width (adjust as needed for progress) */
+}
+
+/* Profile Output Styling */
+#profile-output {
+    padding: 20px; /* Padding inside the profile output */
+    border-radius: 10px; /* Rounded corners for the profile output */
+    margin-top: 20px; /* Space above the profile output */
+}
+
+#profile-output h3 {
+    margin-bottom: 10px; /* Space below the headings in the profile output */
+}
+
+#profile-output p {
+    margin: 5px 0; /* Vertical margin for paragraphs in the profile output */
+}
+
+/* Team Member Section Styling */
+.teamh {
+    text-align: center; /* Center-align the team section heading */
+    margin-top: 40px; /* Space above the team section heading */
+}
+
+.team-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Evenly space team members */
+    flex-wrap: wrap; /* Wrap items to the next line if necessary */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Max width for the container */
+    padding: 0 20px; /* Padding for left and right sides */
+}
+
+.team-member {
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below each team member */
+    flex: 1 1 200px; /* Flex properties for responsiveness */
+    max-width: 200px; /* Maximum width for each team member container */
+    margin: 20px; /* Add some margin for spacing between items */
+}
+
+/* Team Member Image Styling */
+.team-member img {
+    /* Remove margin-left and margin-right for centering */
+    margin-top: 60px; /* Space above the image */
+    border: 4px solid black; /* Black border around the image */
+    width: 200px; /* Fixed width for the image */
+    height: 180px; /* Fixed height for the image */
+    border-radius: 10%; /* Rounded corners for the image */
+    transition: transform 0.5s; /* Smooth transition for scaling on hover */
+}
+
+/* Image Hover Effect */
+.team-member:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+/* Member Details Styling */
+.member-details {
+    display: none; /* Hide details by default */
+    padding: 10px; /* Padding inside the details container */
+    border-radius: 5px; /* Rounded corners for the details container */
+    margin-top: 10px; /* Space above the details container */
+    text-align: center; /* Center align text inside the details container */
+}
+
+/* Show Member Details on Hover */
+.team-member:hover .member-details {
+    display: block; /* Show details on hover */
+}
+
+.member-details h3, .member-details p {
+    margin: 5px 0; /* Vertical margin for headings and paragraphs in the details container */
+}
+
+/* Content Page Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+     /* Remove default margins and paddings */
+    margin: 0;
+    padding: 0;
+    /* Dark gray text color */
+    color: #333;
+    font-size: 20px;
+}
+
+.internal-links {
+    list-style: none;/* Remove default list styling */
+    padding: 0;/* Remove default padding */
+    margin: 20px 0;/* Add some space above and below the list */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around;/* Distribute items evenly */
+}
+ 
+/* Style for each list item */
+.internal-links li {
+    display: inline;
+}
+
+/* Style for the links within the list */
+.internal-links a {
+    text-decoration: none;/* Remove underline from links */
+    color: #333;/* Set text color */
+    background-color: #d2e12c;/* Set background color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;/* Smooth transition for hover effect */
+}
+/* Hover effect for the links */
+.internal-links a:hover {
+    background-color: #ccc;/* Change background color on hover */
+}
+/* Style for the main content section */
+section#content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the section */
+}
+/* Style for headings within articles */
+article h3 {
+    margin-top: 30px;/* Add space above headings */
+    color: #333;
+}
+/* Style for paragraphs and unordered lists within articles */
+article p, article ul {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+/* Style for unordered lists within articles */
+article ul {
+    padding-left: 20px;
+}
+/* Style for list items within unordered lists */
+article ul li {
+    list-style-type: disc;/* Use disc bullets */
+}
+/* Style for specific sections within the article */
+#introduction,#benefits,#strategies,#resources,#conclusion{
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+
+/* Ensure footer stays at the bottom of the page */
+html,body.home{
+    height: 100%;/* Make sure the html and body take up the full height */
+    display: flex;/* Use flexbox for layout */
+    flex-direction: column;/* Arrange items in a column */
+}
+
+main {
+    flex: 1;/* Allow main content to expand */
+    display: flex;/* Use flexbox for layout */
+    flex-direction: column;/* Arrange items in a column */
+}
+
+footer {
+    text-align: center;/* Center the footer text */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px; /* Add space between items */
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;/* Set background color */
+    text-decoration: none;/* Remove underline from links */
+    color:#353535;/* Set text color */
+    font-weight: bold;/* Make text bold */
+    padding: 10px; /* Add padding */
+}
+
+.bottomlinks a:hover {
+/* Dark background on hover */
+    color: #d2e12c;/* Change text color on hover */
+    background-color: #353535;/* Change background color on hover */
+}
+
+/* Style for the back to home button */
+.back-to-home {
+    display: none; /* Initially hide the button */
+    position: fixed;/* Position it fixed on the screen */
+    bottom: 20px;/* Position 20px from the bottom */
+    right: 20px;/* Position 20px from the right */
+    background-color: #353535;
+    color: #d2e12c;/* Set text color */
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;/* Remove underline from link */
+    transition: opacity 0.3s ease;/* Smooth transition for hover effect */
+}
+
+.back-to-home:hover {
+    background-color:#d2e12c;
+    color:#353535;
+}
+
+body.home .back-to-home {
+    display: block; /* Show the button on the home page */
+}
+.back-to-top {
+    display: none; /* Initially hide the button */
+    position: fixed;/* Position it fixed on the screen */
+    bottom: 20px;/* Position 20px from the bottom */
+    left: 20px;/* Position 20px from the left */
+    background-color: #353535;/* Set background color */
+    color: #d2e12c;/* Set text color */
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;/* Smooth transition for hover effect */
+}
+
+.back-to-top:hover {
+    background-color: #d2e12c;/* Change background color on hover */
+    color: #353535;/* Change text color on hover */
+}
+
+body.home .back-to-top {
+    display: block; /* Show the button on the home page */
+}

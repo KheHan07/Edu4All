@@ -1,0 +1,101 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any defaul margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+                            /* top line tht says PAVING THE WAY FOR UNIVERSAL LEARNING*/
+.say {
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexibal mode*/
+    align-items: flex-start;/*align on the start top vertically*/
+    justify-content: center;/*align center horizontally*/
+    margin-top: 1px;/* margin from top*/
+    margin-bottom: 5px;/* margin from bottom */
+    text-align: center;/* text of the block to be centered(necessary when small 
+    the widow size words go down and to be centered) */
+}
+img.logoleft {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-right: 10px;/* margin right 10px*/
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text*/
+    margin-top: 10px;/* from top margin*/
+    font-size: 25px;/* font size*/
+}
+img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-left: 10px;/* margin left 10px*/
+}
+                                            /*nav bar*/
+header {
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/*align center horizontally*/
+}   
+.homenav {
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    background-color: #ffecc0;/*backg. color of the li,a and not strictly necessary*/
+    border-radius:30px;/* outline radius of the nav bar cover*/
+    outline: 5px solid #353535; /* outline color*/
+}
+.menu {
+    list-style: none;/* removes the default bullet points or numbering from the list*/
+    display: flex;/*allowing to use flexbox properties to control the layout of its child elements*/
+    flex-wrap: wrap;/* responsive design */
+    justify-content: center;/*align center horizontally 
+    EVEN WHEN THE SCREEN IS SMALL ONCE CONTENTS GO NEXT LINE */
+}
+.menu li, a {
+    font-weight: bold; /* thickness or boldness of the font*/
+    font-size: 15px;/* font size*/
+    background-color: #ffecc0;/*backg. color of the li,a and not strictly necessary*/
+    color: #353535;/* color of the contents*/
+    text-decoration: none;/*removes the under lines from the links , make it like a button */
+    transition: all 0.2s ease 0s;/*change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings*/
+    display:block/* occupying full width and stacking vertically within their parent <li> elements.*/
+}
+.menu li {
+    padding: 0px; /*touches corner of the content top bottom default turn off*/
+}
+nav ul li a:hover, nav ul li.active a {
+    background-color: #353535;/*bc of li s*/
+    color: #d2e12c;/* text color */
+    border-radius: 30px;/*border radius */
+}/* */
+
+@media (max-width: 840px)/*applies styles viewport width is 840 pixels or less*/ {
+    .saying{
+        font-size: 22px;/*font minimize to 22px */
+    }
+    img.logoright{
+        width: 40px;/* minimize image*/
+    }
+    img.logoleft{
+        width: 40px;/* minimize image*/
+    }
+    header{
+        justify-content: flex-start;/*Aligns to start of the container, moving to left. */
+    }
+    .menu {
+        flex-direction: column;/*arranged in a column instead of a row. */
+        align-items: center;/*center along vertically  */
+        padding-left: 0px;/*  Removes any left padding*/
+    }
+
+    .menu li a {
+        padding: 10px;/*10 pixels of padding on all sides */
+    }
+    .homenav{
+        margin-left: 10px;/*10-pixel margin to the left side */
+    }
+}
+

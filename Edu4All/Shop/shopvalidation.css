@@ -1,0 +1,219 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any defaul margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+                            /* top line tht says PAVING THE WAY FOR UNIVERSAL LEARNING*/
+.say {
+    position: sticky;
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexibal mode*/
+    align-items: flex-start;/*align on the start top vertically*/
+    justify-content: center;/*align center horizontally*/
+    text-align: center;/* text of the block to be centered(necessary when small 
+    the widow size words go down and to be centered) */
+}
+img.logoleft {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-right: 10px;/* margin right 10px*/
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text*/
+    margin-top: 10px;/* from top margin*/
+    font-size: 25px;/* font size*/
+}
+img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements.*/
+    width: 50px; /* width of the image*/
+    height: auto; /* auto height according to the width*/
+    margin-left: 10px;/* margin left 10px*/
+}
+                                            /*nav bar*/
+header {
+    background-color: #353535;
+    color-scheme: #353535;
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/*align center horizontally*/
+    position: sticky;
+    top: 0;
+}   
+.homenav {
+    display: flex;/*to arrange and distribute space among elements in a container, along row or column */
+    background-color: #353535;/*backg. color of the li,a and not strictly necessary*/
+}
+.menu {
+    overflow: hidden;
+    list-style: none;/* removes the default bullet points or numbering from the list*/
+    display: flex;/*allowing to use flexbox properties to control the layout of its child elements*/
+    flex-wrap: wrap;/* responsive design */
+    justify-content: center;/*align center horizontally 
+    EVEN WHEN THE SCREEN IS SMALL ONCE CONTENTS GO NEXT LINE */
+    background-color: #353535;
+}
+.menu li, a {
+    font-weight: bold; /* thickness or boldness of the font*/
+    font-size: 15px;/* font size*/
+    background-color: #353535;/*backg. color of the li,a and not strictly necessary*/
+    color: #ffecc0;/* color of the contents*/
+    text-decoration: none;/*removes the under lines from the links , make it like a button */
+    transition: all 0.2s ease 0s;/*change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings*/
+    display:block/* occupying full width and stacking vertically within their parent <li> elements.*/
+}
+.menu li {
+    padding: 0px; /*touches corner of the content top bottom default turn off*/
+}
+nav ul li a:hover, nav ul li.active a {
+    background-color: #d2e12c;/*bc of li s*/
+    color: #353535;/* text color */
+}
+
+/* styling the '*' indicating required */
+.star {
+    font-size: 18px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* styliing the form */
+.form-section {
+    background-color: #d2e12c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* styliing the form header */
+.form-section h1 {
+    background-color: #d2e12c;
+    margin-bottom: 10px;
+}
+
+/* styliing the form paragraphs describing the instructions before the form sections */
+.form-section p {
+    background-color: #d2e12c;
+    margin-bottom: 20px;
+}
+
+/* applying background color to the form sections */
+.form-sections {
+    background-color: #d2e12c;
+}
+
+/* styling the fieldsets of each form section */
+fieldset {
+    padding-left: 10px;
+    border: 2px solid #353535;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* styling the legends of each form section */
+legend {
+    background-color: #353535;
+    color: #d2e12c;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* styling the labels of the input fields and select fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* adjusting width of the card name and card number input fields */
+#card-name, #card-number{
+    width: 30%;
+}
+
+/* adjusting width of the expiry date and cvv number input fields */
+#expiry-date, #cvv{
+    width: 10%;
+}
+
+/* adjusting width of the address input field */
+#address {
+    width: 80%;
+}
+
+/* adjusting width of the email input field */
+#email {
+    width: 50%;
+}
+
+/* styling the input fields and select field */
+input[type="text"], input[type="email"], input[type="tel"], select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #353535;
+    border-radius: 4px;
+}
+
+/* adjusting width of the select field */
+select {
+    width: 50%;
+}
+
+/* styling the submit and clear buttons */
+button[type="submit"], button[type="reset"] {
+    background-color: #353535;
+    color: #d2e12c;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+/* adding hover effects to submit and clear buttons */
+button[type="submit"]:hover, button[type="reset"]:hover {
+    background-color: #191919;
+    color: #d2e12c;
+}
+
+/* adjusting footer */
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+/* styling the page editor link */
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #353535;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* hover effects on page editor link */
+.bottomlinks a:hover{
+    color:#d2e12c;
+    background-color: #353535;
+}

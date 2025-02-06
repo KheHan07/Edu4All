@@ -1,0 +1,341 @@
+* {
+    font-family: "Trebuchet MS", sans-serif;/* font for the whole website */
+    margin: 0px;/* remove any default margin(top, right, bottom, and left)*/
+    padding: 0px;/* space inside an element (top, right, bottom, and left)*/
+    background-color: #ffecc0;/* background-color*/
+}
+html, body {
+    height: 100%;/*makes sure body elements use full height of the browser */
+    display: flex;/*enable  more control over their positioning and alignments */
+    flex-direction: column;/* setting the flex container to be laid out as a column*/
+}
+.main-content {
+    flex: 1;/* allow to expand and fill available spaces ENSURE the footer stays bottom if there isnt enough content */
+    display: flex;/*flexbox model for its direct children*/
+    flex-direction: column;/*to step the direction of the flex container to be vertical*/
+}
+.say {
+    margin-top: 0%;
+    padding-top: 0%;
+    position: sticky;/*allows to stick to the top of the viewport when scrolling pass it. */
+    background-color:#d2e12c;/*background color of the say line */
+    display: flex;/* flexible mode */
+    align-items: flex-start;/* align on the start top vertically */
+    justify-content: center;/* align center horizontally */
+    text-align: center;/* text of the block to be centered */
+}
+
+img.logoleft, img.logoright {
+    background-color:#d2e12c;/*background color  */
+    vertical-align: middle;/* align the image to the middle relative to the text or other inline elements. */
+    width: 50px; /* width of the image */
+    height: auto; /* auto height according to the width */
+    margin: 10px; /* margin around the images */
+}
+.saying {
+    background-color:#d2e12c;/*background color  */
+    color: #353535;/* color of the text */
+    margin-top: 20px;/* from top margin */
+    font-size: 25px;/* font size */
+}
+header {
+    z-index: 1000;
+    background-color: #353535;/*bg color*/
+    display: flex;/* to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center;/* align center horizontally */
+    position: sticky;/*header should stick to the top of its containing block*/
+    top: 0;/*means the top edge*/
+}
+.menu {
+    
+    list-style: none;/* removes the default bullet points or numbering from the list */
+    display: flex;/* allowing to use flexbox properties to control the layout of its child elements */
+    flex-wrap: wrap;/*responsive design */
+    justify-content: center;/* align center horizontally */
+    background-color: #353535;/*bg color even wraping*/
+}
+.menu li, a {
+    
+    font-weight: bold; /* thickness or boldness of the font */
+    font-size: 15px;/* font size */
+    background-color: #353535;/* backg. color of the li,a and not strictly necessary */
+    color: #ffecc0;/* color of the contents */
+    text-decoration: none;/* removes the under lines from the links */
+    transition: all 0.2s ease 0s;/* change over a duration of 0.2 seconds */
+    padding: 15px 15px;/* top bottom paddings and left right paddings */
+    display: block/* occupying full width and stacking vertically within their parent <li> elements. */
+}
+.menu li {
+    
+    padding: 0px; /* touches corner of the content top bottom default turn off */
+}
+
+nav ul li a:hover, nav ul li.active a {
+
+    background-color: #d2e12c;/*bc of li s*/
+    color: #353535;/* text color */
+}
+
+.mission {
+    background-color: #ffecc0;/* mission */
+    color: #353535;
+    margin: 40px auto;
+    margin-bottom: 0px;
+    width: 80%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.mission h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.mission a{
+    box-shadow: 2px 4px 4px 2px #00000042;/* box shadow color and adjustments */
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.6;
+}
+.photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #ffecc0;
+    color: #ffecc0;
+}
+.photo-row {
+    color: #ffecc0;
+    background-color: #ffecc0;
+}
+
+.photo-column {
+    color: #ffecc0;
+    background-color: #ffecc0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 0;
+    position: relative;
+}
+.photo-column a {
+    background-color: #ffecc0;
+    position: relative;
+    display: inline-block;
+}
+.photo-column img {
+    box-shadow: 4px 7px 7px 5px #00000042;
+    background-color: #ffecc0;
+    width: 300px; /* Adjust the size as needed */
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #353535;
+    border-radius: 5px;
+    transition: 400ms;
+}
+
+.photo-column img:hover {/*  */
+    filter: grayscale(1);
+    transform: scale(1.03);
+}
+
+.photo-column a .overlay {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    bottom: 19px;
+    right: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffecc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 400ms;
+    border-radius: 1px;
+    pointer-events: none; /* Prevents overlay from interfering with hover */
+}
+
+.photo-column a:hover .overlay {
+    opacity: 1;
+}
+
+.group{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #353535;
+    font-weight: bold;
+    padding: 10px;
+}
+.bottomlinks a:hover{
+    color:#d2e12c;
+    background-color: #353535;
+}
+
+/* Responsive styles */
+@media (max-width: 840px) {
+ 
+}
+
+.highl{
+    background: none;
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 80px;
+    cursor: pointer;
+}
+:root { 
+    --clr: #353535;/* our mission root color */
+  }
+  
+  .text {
+    background: none;
+    color: transparent;
+    -webkit-text-stroke: 1px #d2e12c;
+    transition: 0.1s ease;
+    transition-delay: 0.25s;
+  }
+  
+  .hover-text {
+    background: none;
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    color: var(--clr);
+    overflow: hidden;
+    border-right: 6px solid var(--clr);
+    transition: 0.5s ease-in-out;
+  }
+  
+  div:hover .hover-text {/* hover effects */
+    width: 100%;
+    filter: drop-shadow(0 0 40px var(--clr));
+  }
+  div:hover .text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+  } 
+
+  #nelson{/* quote */
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  #mande{
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  .parag{
+
+    font-weight: bold;
+    font-size: 20px;
+  }
+.grp{
+width: 100%;
+height: 300px;
+}
+
+
+.topp {
+    font-size: 50px;
+    background-color: #353535;
+    font-family: "Trebuchet MS";
+    font-weight: bolder;
+    max-width: 40ch;
+    text-align: center;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  }
+  
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  span {
+    background-color: #353535;
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  span:nth-child(6) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+
+  
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+.uppp{/* animation text of the begining  */
+    background-color: #353535;
+    color: #d2e12c;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

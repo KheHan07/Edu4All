@@ -1,0 +1,95 @@
+*{ /* Adjusting default settings for all elements */
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #353535;
+    text-align: center;
+    overflow-y: auto; /* Allowing website to only scroll vertically */
+    overflow-x: hidden;
+}
+
+.image{ /* Background image styling */
+    width: 100%;
+    height: 100vh; /* 100vh used for image to be responsive */
+    background-position: center;
+    background-size: cover;
+    background-image: url("Images/Splash_BG.jpg");
+}
+
+.image-overlay{ /* Transparent color overlay on background styling */
+    width: 100%;
+    height: 100vh; /* 100vh used for color overlay layer to be responsive with the background */
+    background-color: rgba(255, 236, 192, 0.83);
+}
+
+.web-title{ /* Background color for logo and text at the top */
+    height: 50px;
+    background-color: #d2e12c;
+}
+
+#logo{ /* Adjusting logo at the top to fit in right place */
+    position: relative;
+    top: 5px;
+    right: 20px;
+    width: 40px;
+}
+
+span{ /* Ajusting the text at the top "Universal Learning Access" 
+    to properly align with the logo */
+    position: relative;
+    top: -7px;
+    right: 10px;
+    font-size: 20px;
+}
+
+hr{ /* Adjusting horizontal ruler under .header div */
+    position: relative;
+    top: 3.5px;
+    height: 1.5px;
+    border-width: 0;
+    background-color: black;
+}
+
+h1{font-size: 72px;} /* "Mission:" text adjustment */
+
+h2{ /* text adjustment directly under "Mission:" */
+    padding: 0px 20px;
+    font-size: 55px;
+}
+
+h3{font-size: 40px;} /* "Group Members:" text adjustment */
+
+h4{ /* "Loading..." text adjustment */
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    font-size: 30px;
+}
+
+ul{ /* Styling to ordered list (Group Members List) */
+    list-style-type: none;
+    display: inline-block;
+    font-size: 30px;
+}
+
+#load{ /* Adjusting height and positioning loading animation gif */
+    position: relative;
+    top: 20px;
+    width: 226px;
+    height: auto;
+}
+
+.load{ /* Positioning whole loading animation accordingly */
+    position: relative;
+    top: -60px;
+}
+
+.mission{ /* Positioning website mission div accordingly */
+    position: relative;
+    top: -60px;
+}
+
+.group{ /* Positioning group members div accordingly */
+    position: relative;
+    top: -30px;
+}

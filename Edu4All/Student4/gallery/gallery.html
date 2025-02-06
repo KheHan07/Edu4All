@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Universal Learning Access</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css"> <!-- gallery CSS -->
+    <link rel="icon" href="3.png"> <!-- icon image Fostering knowledge through quality education-->
+</head>
+<body>
+    <div class="main-content">
+        <div class="say">
+            <img class="logoleft" src="5.png" alt="logo">
+            <h1 class="saying">PAVING THE WAY FOR UNIVERSAL LEARNING</h1>
+            <img class="logoright" src="5.png" alt="logo">
+        </div>
+        <header>
+            <nav class="homenav"> <!-- navigation bar -->
+                <ul class="menu">
+                    <li><a href="../../Student2/home.html">HomePage</a></li>
+                    <li><a href="../../Student3/profile.html">UserProfile</a></li>
+                    <li><a href="../../Shop/shop.html">Shop</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li> <!--shows that the gallery is active within the nav bar-->
+                    <li><a href="../../Student2/feedback.html">Feedback</a></li>
+                    <li><a href="../../Student3/team.html">Team</a></li>
+                    <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="gallery-container"> <!--wraps around all thumbnails making it easier to apply css-->
+            <div class="thumbnail" data-title="Child Studying" data-description="A child studies on her own without equipment, thus 
+            showcasing the hardships that children in poverty stricken areas have to endure. These sights often come at the cost
+             of balancing home duties along with making sure other family members are taken care of.">
+                <img src="image1.jpg" alt="Child Studying"> <!--data description provides additional information upon clicking on the extended view-->
+                <div class="thumbnail-details">
+                    <h2>Child Studying Alone</h2>
+                </div>
+            </div>
+            <div class="thumbnail" data-title="Learn not Earn" data-description="African countries have historically 
+            depended on child labour to make their daily wages and get tasks done. This comes at the cost of having 
+            to sacrifice their education, which then affects their future.">
+                <img src="image2.jpg" alt="Learn not Earn">
+                <div class="thumbnail-details">
+                    <h2>Children Rally in Protest to Highlight the Importance of Education</h2>
+                </div>
+            </div>
+            <div class="thumbnail" data-title="Child's life" data-description="Children in most parts of the world 
+            have to play the role of the adult due to their lack of funds and education. This keeps them in cycles
+             of poverty without a gateway to a better life. Children should be allowed to be children.">
+                <img src="image3.jpg" alt="Child's life">
+                <div class="thumbnail-details">
+                    <h2>A Child Looks on Happily as He is About to Learn</h2>
+                </div>
+            </div>
+            <div class="thumbnail" data-title="Outdoor Classrooms" data-description="In most countries that are
+             incapable of providing a holistic education for children, often have underdeveloped architecture. 
+             This prompts children to have to resort to learning without a roof over their heads.">
+                <img src="image4.jpg" alt="Outdoor Classrooms">
+                <div class="thumbnail-details">
+                    <h2>Children Learning Outside</h2>
+                </div>
+            </div>
+            <div class="thumbnail" data-title="Determination" data-description="Even amidst a lack of 
+            infrastructure and proper learning facilities, children within these parts of the world still
+             find the unwavering spirit and determination to keep on learning and gain a proper education.">
+                <img src="image5.jpg" alt="Determination">
+                <div class="thumbnail-details">
+                    <h2>The Determination of Children</h2>
+                </div>
+            </div>
+            <div class="thumbnail" data-title="Disparity of Education" data-description="The massive income disparity
+             between developing and developed countries also play a huge part in the distribution of equal opportunities
+              and educational capabilities. The SDG's main goal is to lessen these disparities to provide an equal learning
+               for all.">
+                <img src="image6.jpg" alt="Disparity of Education">
+                <div class="thumbnail-details">
+                    <h2>Income Disparity</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="bottomlinks"> <!--the footer links -->
+            <li><a href="../editor/editor.html">Student 4</a></li>
+        </ul>
+    </footer>
+    <!-- Overlay for extended view -->
+    <div id="overlay" class="overlay"> <!--this contains the code for the extended view-->
+        <div class="extended-view">
+            <span id="closeBtn" class="close">&times;</span> <!--a close button users can use to exit extended view-->
+            <img id="extendedImage" src="" alt=""> <!--displays the enlarged view of the image-->
+            <h2 id="extendedTitle"></h2> <!--displays title-->
+            <p id="extendedDescription"></p> <!--displays description-->
+            <div class="customization"> <!--contains code to customise -->
+                <label for="colorPicker">Choose Background Color: </label>
+                <input type="color" id="colorPicker">
+                <label for="fontPicker">Choose Font Style: </label>
+                <select id="fontPicker">
+                    <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                    <option value="'Arial', sans-serif">Arial</option>
+                    <option value="'Courier New', monospace">Courier New</option>
+                    <option value="'Georgia', serif">Georgia</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+* {
+    font-family: "Trebuchet MS", sans-serif; /* font for the whole website */
+    margin: 0px; /* remove any default margin(top, right, bottom, and left) */
+    padding: 0px; /* space inside an element (top, right, bottom, and left) */
+    background-color: #ffecc0; /* background-color */
+}
+html, body {
+    height: 100%; /*makes sure body elements use full height of the browser */
+    display: flex; /* enable  more control over their positioning and alignments */
+    flex-direction: column; /* setting the flex container to be laid out as a column */
+}
+.main-content {
+    flex: 1; /* allow to expand and fill available spaces ENSURE the footer stays bottom if there isnt enough content */
+    display: flex; /* flexbox model for its direct children */
+    flex-direction: column; /* to step the direction of the flex container to be vertical */
+}
+.say {
+    position: sticky; /* allows to stick to the top of the viewport when scrolling pass it. */
+    background-color:#d2e12c; /* background color of the say line */
+    display: flex; /* flexible mode */
+    align-items: flex-start; /* align on the start top vertically */
+    justify-content: center; /* align center horizontally */
+    text-align: center; /* text of the block to be centered */
+}
+
+img.logoleft, img.logoright {
+    background-color:#d2e12c; /*background color  */
+    vertical-align: middle; /* align the image to the middle relative to the text or other inline elements. */
+    width: 50px; /* width of the image */
+    height: auto; /* auto height according to the width */
+    margin: 10px; /* margin around the images */
+}
+.saying {
+    background-color:#d2e12c; /*background color  */
+    color: #353535; /* color of the text */
+    margin-top: 20px; /* from top margin */
+    font-size: 25px; /* font size */
+}
+header {
+    background-color: #353535; /*bg color */
+    display: flex; /* to arrange and distribute space among elements in a container, along row or column */
+    justify-content: center; /* align center horizontally */
+    position: sticky; /*header should stick to the top of its containing block */
+    top: 0; /*means the top edge */
+    z-index: 1000; /* ensures the header stays on top */
+}
+.menu {
+    list-style: none; /* removes the default bullet points or numbering from the list */
+    display: flex; /* allowing to use flexbox properties to control the layout of its child elements */
+    flex-wrap: wrap; /*responsive design */
+    justify-content: center; /* align center horizontally */
+    background-color: #353535; /*bg color even wrapping */
+}
+.menu li, a {
+    font-weight: bold; /* thickness or boldness of the font */
+    font-size: 15px; /* font size */
+    background-color: #353535; /* backg. color of the li,a and not strictly necessary */
+    color: #ffecc0; /* color of the contents */
+    text-decoration: none; /* removes the under lines from the links */
+    transition: all 0.2s ease 0s; /* change over a duration of 0.2 seconds */
+    padding: 15px 15px; /* top bottom paddings and left right paddings */
+    display: block /* occupying full width and stacking vertically within their parent <li> elements. */
+}
+.links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.links li, a {
+    font-size: 14px;
+    display: inline-block;
+}
+.menu li {
+    padding: 0px; /* touches corner of the content top bottom default turn off */
+}
+.links ul li a:hover {
+    background-color: #d2e12c; /*bc of li s */
+    color: #353535; /* text color */
+}
+nav ul li a:hover, nav ul li.active a {
+    background-color: #d2e12c; /*bc of li s */
+    color: #353535; /* text color */
+}
+footer {
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+.bottomlinks {
+    background-color: #d2e12c;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottomlinks li {
+    background-color: #d2e12c;
+    margin: 0 10px;
+}
+
+.bottomlinks a {
+    background-color: #d2e12c;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+}
+.bottomlinks a:hover {
+    color:#d2e12c;
+    background-color: #353535;
+}
+.topics {
+    padding-top: 45px;
+    font-size: 20px;
+    text-align: center; /* center the topics */
+}
+article {
+    width: 70%;
+    margin: 0 auto;
+}
+img {
+    margin-top: 30px;
+    max-width: 60%;
+}
+p {
+    text-wrap: pretty;
+    text-align: justify; /* align paragraphs to justify */
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* center the h2 */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes fade-out {
+        to {
+            scale: 150%;
+            opacity: 0;
+            filter: blur(5px);
+        }
+    }
+
+    img {
+        position: relative;
+        animation: scrollin cubic-bezier(0.23, -0.26, 0.78, 1.29) both, fade-out linear both;
+        animation-timeline: view();
+        animation-range: 1vh 50vh, exit -10px;
+        transform-origin: left;
+    }
+
+    @keyframes scrollin {
+        from {
+            scale: 0.3;
+            opacity: 0;
+            left: -25vh;
+        }
+
+        to {
+            opacity: 1;
+            scale: 1;
+            left: 0;
+        }
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+}
+
+#back-to-home {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+
+#back-to-top, #back-to-home {
+    background-color: #d2e12c;
+    color: #353535;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+}
+
+#back-to-top:hover, #back-to-home:hover{
+    background-color: #353535;
+    color: #d2e12c;
+}

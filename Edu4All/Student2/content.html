@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Universal Learning Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css"> <!-- css -->
+    <link rel="icon" href="5.png"> <!-- icon image -->
+</head>
+<body>
+    <div class="main-content">
+        <div class="say">
+            <img class="logoleft" src="5.png" alt="logo">
+            <h1 class="saying">PAVING THE WAY FOR UNIVERSAL LEARNING</h1>
+            <img class="logoright" src="5.png" alt="logo">
+        </div>
+            <header>
+                <nav class="homenav"> <!-- navigation bar -->
+                    <ul class="menu">
+                        <li class="active"><a href="home.html">HomePage</a></li>
+                        <li><a href="../Student3/profile.html">UserProfile</a></li>
+                        <li><a href="../Shop/shop.html">Shop</a></li>
+                        <li><a href="../Student4/gallery/gallery.html">Gallery</a></li>
+                        <li><a href="../Student2/feedback.html">Feedback</a></li>
+                        <li><a href="../Student3/team.html">Team</a></li>
+                        <li><a href="../Student4/sitemap/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <article>
+                <h2>Curriculum and Instruction</h2>
+                <div class="links">
+                    <ul class="linkofsub"><!-- links for subtopic parts in the webpage-->
+                        <li><a href="#1">Access to education</a></li>
+                        <li><a href="#2">Curriculum relevance</a></li>
+                        <li><a href="#3">Quality Teachers</a></li>
+                        <li><a href="#4">Conclusion</a></li>
+                    </ul>
+                </div>
+                <img src="young.jpg" alt="a little girl" title="Photo by">
+
+                <p>Quality education, It is important to consider how multidimensional of a topic is. To ensure quality education, each of these components plays an important part in creating a successful learning environment. These components include access to education, relevant curriculums, and the quality of teachers, as well as the inclusive practices that occur within the school. Having knowledge of the many subtopics associated with quality education helps us to realize the nature of providing quality education to all regardless of age, background, and location.</p>
+
+                <img src="caring.jpg" alt="parents teach." title="Photo by">
+
+                <p class="topics" id="1"><b>Access to education</b></p>
+                <p class="para">It is a fundamental necessity to ensure that all children irrespective of their socioeconomic status or geographical situation can have access to education. Ensuring access necessitates overcoming the barriers of <b>poverty, discrimination,</b> and <b>the lack of schools or other infrastructure</b>, and requires initiatives such as establishing schools in remote areas, providing scholarships, and establishing inclusive policies that bring education closer to all children.</p>
+                
+                <img src="cute.jpg" alt="a little boy" title="Photo by.">
+
+                <p class="topics" id="2"><b>Curriculum relevance</b></p>
+                <p class="para">Quality education that includes a well-rounded and multi-dimensional curriculum is paramount. Subjects such as <b>mathematics, science, English, and history</b> are essential to the curriculum, which provides students with the knowledge and skills to understand and navigate the world around them. Additionally, the curriculum should be relevant and responsive to the changing needs of society, whilst providing students with opportunities and preparing them for future challenges and opportunities. Moreover, the curriculum should encourage the development of <b>critical thinking, creativity,</b> and <b>problem solving skills</b> so that students can make well-informed decisions about their futures.</p>
+
+                <img src="reading.jpg" alt="girl read a book" title="Photo by.">
+
+                <p class="topics" id="3"><b>Quality Teachers</b></p>
+                <p class="para">The quality of education students receive is highly dependent on the quality of their teachers. Teachers who are highly trained and motivated make a difference in a student's learning experience and outcomes. The most important things for recruiting and retaining quality teachers are professional development opportunities, competitive salaries, and supportive working conditions. By providing quality professional learning opportunities, updated initiatives, and technologies, teachers can only enhance their instruction.</p>
+
+                <img src="concept.jpg" alt="a girl a book on head" title="Photo by">
+
+                <p class="topics" id="4"><b>Conclusion</b></p>
+                <p class="para">Mathematics, science, English and world history are considered essential components of a comprehensive education. It is through these courses that students are able to acquire a foundational knowledge base and develop critical thinking skills that will empower them to make informed choices regarding their future. A comprehensive curriculum, in conjunction with effective instruction, can prepare students to engage meaningfully in society and navigate the complexities of the modern world.</p>
+                
+                <button id="back-to-top" onclick="backToTop()">Back to Top</button><!-- back to top button using javascript-->
+                <button id="back-to-home" onclick="backToHome()">Back to Home</button><!-- back to home button using javascript-->
+            </article>    
+
+            <footer>
+                <ul class="bottomlinks">
+                    <li><a href="editor.html" target="_blank">Student 2</a></li>
+                </ul>
+            </footer>
+    </div>
+</body>
+</html>
+<script>
+
+function backToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function backToHome() {
+    window.location.href = "home.html";
+}
+
+window.onscroll = function() {
+    var buttonTop = document.getElementById('back-to-top');
+    var buttonHome = document.getElementById('back-to-home');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        buttonTop.style.display = 'block';
+        buttonHome.style.display = 'block';
+    } else {
+        buttonTop.style.display = 'none';
+        buttonHome.style.display = 'none';
+    }
+};
+</script>
